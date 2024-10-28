@@ -8,9 +8,6 @@ let loginPage=new LoginPage;  // Declare loginPage without initializing it
 
 Given('I navigate to {string}', async function (url) {
   await page.goto(url);
-  
-  const pageTitle = await page.title();
-  expect(pageTitle).not.toBeNull();  // Optional check to ensure the page loaded
 });
 
 When('I enter valid credentials', async function () {
@@ -23,9 +20,14 @@ When('I click on the {string} button', function (name) {
 });
 
 
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 When("I wait {string} seconds", async function (seconds) {
   const timeout = parseInt(seconds, 10);
-  await delay(timeout * 1000);
+  await new Promise((resolve) => setTimeout(resolve, timeout * 1000)); // Multiply by 1000 to convert seconds to milliseconds
 });
+
+Then('the additional information banner should be visible', async () => {
+  await expect(page.locator(loginPage.additionalInformationBanner)).toBeVisible();	
+});
+
+

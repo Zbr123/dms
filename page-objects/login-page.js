@@ -5,6 +5,8 @@ class LoginPage {
   loginButton(buttonText) {
     return (`//button[contains(.,'${buttonText}')]`);
   }
+
+  additionalInformationBanner = `//div[contains(@class,'validation-badge')and contains (.,'Additional information needed')]`;
 }
 
 module.exports = LoginPage;
