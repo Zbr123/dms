@@ -4,17 +4,81 @@
     "elements": [
       {
         "description": "",
-        "id": "login-page;login-with-valid-credentials-on-dms-portal",
+        "id": "api;scenario:-validate-api-response-and-ui-title",
         "keyword": "Scenario",
         "line": 4,
-        "name": "Login with valid credentials on DMS portal",
+        "name": "Scenario: Validate API response and UI title",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 206000000
+              "duration": 679000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I send a request to the API endpoint \"/posts/1\"",
+            "match": {
+              "location": "step-definitions\\apistep.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1026000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 222000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Api",
+    "tags": [],
+    "uri": "features\\Plaforms\\Admin\\Api.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "application-version-verification;verify-the-version-of-application",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify the Version of application",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 593000000
             }
           },
           {
@@ -27,46 +91,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3540000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "I enter valid credentials",
-            "match": {
-              "location": "step-definitions\\login-steps.js:13"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1649000000
+              "duration": 5237000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 7,
-            "name": "I click on the \"Sign in\" button",
+            "line": 6,
+            "name": "I should see Version \"1.3.4\" text",
             "match": {
-              "location": "step-definitions\\login-steps.js:18"
+              "location": "step-definitions\\login-steps.js:110"
             },
             "result": {
               "status": "passed",
-              "duration": 189000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the additional information banner should be visible",
-            "match": {
-              "location": "step-definitions\\login-steps.js:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1923000000
+              "duration": 108000000
             }
           },
           {
@@ -82,7 +120,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39000000
+              "duration": 145000000
             }
           }
         ],
@@ -95,11 +133,2343 @@
         "type": "scenario"
       }
     ],
+    "id": "application-version-verification",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Application Version verification",
+    "tags": [],
+    "uri": "features\\Plaforms\\Admin\\applicationVersion.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "document-page;user-should-see-\"view-document-examples\"-on-the-portal",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "User should see \"View Document Examples\" on the portal",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 561000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5234000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I enter username \"testhary23@mail.com\" and \"HARISS236743\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2405000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 289000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2945000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click on the \"Documents\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 794000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see \"Why we need to collect identity documents\" on document page",
+            "match": {
+              "location": "step-definitions\\login-steps.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I click on \"View Document Examples\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 272000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see identify \"Identification document examples\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2017000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 225000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "document-page;user-view-\"upload-document-instruction\"-on-portal",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "user View \"upload Document instruction\" on portal",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 823000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4584000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I enter username \"testhary23@mail.com\" and \"HARISS236743\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2406000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 323000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2921000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I click on the \"Documents\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1363000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see \"Why we need to collect identity documents\" on document page",
+            "match": {
+              "location": "step-definitions\\login-steps.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I click on \"View Upload Instructions\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 272000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should see steps \"How to upload documents\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2015000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 80000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "document-page;user-see-w\"hy-we-need-to-collect-identity-documents\"-on-documnet-portal",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "user see W\"hy we need to collect identity documents\" on Documnet portal",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 492000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4828000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I enter username \"testhary23@mail.com\" and \"HARISS236743\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2765000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 383000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2950000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I click on the \"Documents\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1562000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "I should see \"Why we need to collect identity documents\" on document page",
+            "match": {
+              "location": "step-definitions\\login-steps.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "I click on \"Learn More\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "I should see steps \"Why we need to collect your identity documents\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2029000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 73000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 25
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "document-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Document page",
+    "tags": [],
+    "uri": "features\\Plaforms\\Admin\\documentsTab.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "forgot-password;forgot-password",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Forgot password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 638000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4360000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I click on the \"Forgot Email/Password?\" textlink",
+            "match": {
+              "location": "step-definitions\\login-steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1662000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see Account password text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 896000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 142000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "forgot-password",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Forgot Password",
+    "tags": [],
+    "uri": "features\\Plaforms\\Admin\\forgotpwd.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-page;login-with-valid-credentials-on-dms-portal",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login with valid credentials on DMS portal",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 603000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5445000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I enter username \"tu-test40.reuse2@ccnoemail.com\" and \"BROKAW224573\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2122000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 333000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2957000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 151000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-page;login-with-an-invalid-username",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Login with an invalid username",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 564000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3520000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I enter username \"invalid-user\" and \"BROKAW224573\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2277000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see invalid \"The username or password you entered is incorrect\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 89000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-page;login-with-an-invalid-password",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Login with an invalid password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 489000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4664000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I enter username \"tu-test40.reuse2@ccnoemail.com\" and \"invalid-pwd\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2439000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 230000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should see invalid \"You have entered incorrect login credentials. Please try again.\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 899000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 142000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-page;login-with-invalid-username-and-invalid-password",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Login with invalid username and invalid password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 578000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4677000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I enter username \"invalid-user\" and \"invalid-pwd\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2746000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 318000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I should see invalid \"The username or password you entered is incorrect\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 136000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 25
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-page;login-with-blank-username",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Login with blank username",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 663000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4952000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I enter username \"\" and \"pass\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1984000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 314000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should see invalid \"Email Address is required\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 126000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 32
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-page;login-with-blank-password",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "Login with blank password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 390000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 41,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4941000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "I enter username \"invalid-user\" and \"\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2567000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 304000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "I should see invalid \"Password is required\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 141000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 39
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
     "id": "login-page",
     "line": 1,
     "keyword": "Feature",
     "name": "Login Page",
     "tags": [],
     "uri": "features\\Plaforms\\Admin\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "profile-page-feature;clear-ssn-and-date-of-birth-fields-on-dms-portal",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Clear SSN and Date of Birth fields on DMS portal",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 772000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4737000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I enter username \"hariss@mail.com\" and \"TEST890972\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2432000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 276000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2933000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I enter SSN \"1234\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1217000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I enter DATE \"12121934\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 828000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I click on the \"Clear\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3605000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "the Submit button should be disabled again",
+            "match": {
+              "location": "step-definitions\\login-steps.js:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 148000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "profile-page-feature;displaying-zero-attempts-remaining-after-three-invalid-data-submissions",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Displaying zero attempts remaining after three invalid data submissions",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 601000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4771000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I enter username \"hariss@mail.com\" and \"TEST890972\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2772000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 379000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2974000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 34,
+            "name": "I enter SSN \"1234\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1107000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I enter DATE \"12121934\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 705000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click on the \"Submit\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 484000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I click on the \"Try Again\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4283000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "I should see You have \"2\" attempts remaining.",
+            "match": {
+              "location": "step-definitions\\login-steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7924000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I enter DATE \"12121934\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 307000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I click on the \"Submit\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 234000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I click on the \"Try Again\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3623000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "I should see You have \"1\" attempts remaining.",
+            "match": {
+              "location": "step-definitions\\login-steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6895000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I enter DATE \"12121934\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 285000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I click on the \"Submit\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I click on the \"Upload a Document\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4569000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 46,
+            "name": "I should see \"Why we need to collect identity documents\" on document page",
+            "match": {
+              "location": "step-definitions\\login-steps.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "I click on the \"Profile\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3647000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "I should see You have \"0\" attempts remaining.",
+            "match": {
+              "location": "step-definitions\\login-steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6024000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 28
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "profile-page-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Profile page feature",
+    "tags": [],
+    "uri": "features\\Plaforms\\Admin\\Profile.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "sign-out-page;successfully-logging-out-of-the-application",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Successfully logging out of the application",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 469000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5370000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I enter username \"tu-test40.reuse2@ccnoemail.com\" and \"BROKAW224573\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2166000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 323000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2910000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click on the signout button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2888000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I should see Sign in text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 180000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 93000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "sign-out-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Sign out Page",
+    "tags": [],
+    "uri": "features\\Plaforms\\Admin\\Signout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "update-password;update-password-on-dms-portal",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Update password on DMS portal",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 534000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4683000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I enter username \"tu-test40.reuse2@ccnoemail.com\" and \"BROKAW224573\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2572000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 350000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2949000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click on the \"Change Password\" textlink",
+            "match": {
+              "location": "step-definitions\\login-steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1135000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see Change Password text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 903000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I enter password \"BROKAW224573\" for \"Current Password\" field",
+            "match": {
+              "location": "step-definitions\\login-steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I enter password \"test123T\" for \"New Password\" field",
+            "match": {
+              "location": "step-definitions\\login-steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 174000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter password \"test123T\" for \"Confirm New Password\" field",
+            "match": {
+              "location": "step-definitions\\login-steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click on the \"Update\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 295000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see Unable to update password, please try again later text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 905000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 93000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-password;new-pwd-and-confirm-pwd-must-be-matched",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "New pwd and Confirm pwd must be matched",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 485000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4569000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I enter username \"tu-test40.reuse2@ccnoemail.com\" and \"BROKAW224573\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2708000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 293000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2985000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I click on the \"Change Password\" textlink",
+            "match": {
+              "location": "step-definitions\\login-steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1298000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I should see Change Password text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 882000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I enter Currentpwd \"BROKAW224573\" Newpwd \"Zubair@123\" confirmpwd \"zubair\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 561000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the \"Update\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 230000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should see \"New Password and confirm password must match\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 93000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-password;display-error-for-invalid-password-format",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Display error for invalid password format",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 389000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5154000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I enter username \"tu-test40.reuse2@ccnoemail.com\" and \"BROKAW224573\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2053000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 325000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2928000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I click on the \"Change Password\" textlink",
+            "match": {
+              "location": "step-definitions\\login-steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 688000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I should see Change Password text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 914000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "I enter Currentpwd \"BROKAW224573\" Newpwd \"123456789\" confirmpwd \"123456789\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 687000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I click on the \"Update\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "I should see \"Invalid password format, please use atleast one uppercase, one lowercase and one digit\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 142000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-password;display-error-for-password-less-than-minimum-length",
+        "keyword": "Scenario",
+        "line": 43,
+        "name": "Display error for password less than minimum length",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 580000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 44,
+            "name": "I navigate to \"https://portal.tst-usw2.clearcaptions.com/login\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5120000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "I enter username \"tu-test40.reuse2@ccnoemail.com\" and \"BROKAW224573\" password",
+            "match": {
+              "location": "step-definitions\\login-steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2143000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I click on the \"Sign in\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 340000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "the additional information banner should be visible",
+            "match": {
+              "location": "step-definitions\\login-steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2915000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "I click on the \"Change Password\" textlink",
+            "match": {
+              "location": "step-definitions\\login-steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1013000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "I should see Change Password text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 911000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "I enter Currentpwd \"BROKAW224573\" Newpwd \"123\" confirmpwd \"123\"",
+            "match": {
+              "location": "step-definitions\\login-steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 752000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "I click on the \"Update\" button",
+            "match": {
+              "location": "step-definitions\\login-steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 274000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "I should see \"Minimum length of password must be eight characters\" text",
+            "match": {
+              "location": "step-definitions\\login-steps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 133000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@run",
+            "line": 42
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "update-password",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Update Password",
+    "tags": [],
+    "uri": "features\\Plaforms\\Admin\\Updatepwd.feature"
   }
 ]

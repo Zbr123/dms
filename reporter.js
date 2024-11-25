@@ -1,5 +1,4 @@
 let reporter = require('cucumber-html-reporter');
-
 let options = {
     theme: 'bootstrap',
     jsonFile: 'reports/cucumber_report.json',
@@ -17,5 +16,4 @@ let options = {
         "Executed": "Remote"
     }
 };
-
 reporter.generate(options);
