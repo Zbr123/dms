@@ -9,7 +9,7 @@ Then the additional information banner should be visible
 When I click on the "Documents" button
 Then I should see "Why we need to collect identity documents" on document page
 When I click on "View Document Examples" button on document page
-Then I should see identify "Identification document examples" text
+Then I should see "Identification document examples" heading
 
 @run
 Scenario: User should see "View Upload Instruction" button on the document page
