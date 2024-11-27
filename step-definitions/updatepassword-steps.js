@@ -11,6 +11,6 @@ When('I enter Currentpwd {string} Newpwd {string} confirmpwd {string}', async fu
   });
 
   When('I enter password {string} for {string} field', async function (password, field) {
-    await page.fill(loginPage.inputFieldForUpdatePwd(field), password);
+    await page.fill(updatePasswordPage.inputFieldForUpdatePwd(field), password);
   });
   

@@ -3,12 +3,7 @@ class LoginPage {
 
   passwordInput = `input[name='password']`;
 
-  
-  applicationVersion(versionNumber) {
-    return `//div[contains(@class,'version') and contains(., '${versionNumber}')]`;
-  }
-
-  erroMessageIncorrectLogin(invalidmessage) {
+    erroMessageIncorrectLogin(invalidmessage) {
     return `//div[@class='sc-fqkvVR eEldLM']/p[text()='${invalidmessage}']`;
   }
 

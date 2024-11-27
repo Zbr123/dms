@@ -50,9 +50,7 @@ Then('I should see Sign in text', async () => {
   await expect(page.locator(loginPage.heading)).toHaveText('Sign in');
 });
 
-Then('I should see Version {string} text', async function (versioname) {
-  await expect(page.locator(loginPage.applicationVersion(versioname))).toBeVisible();
-});
+
 
 Then('I should see invalid {string} text', async function (invalidcred) {
   await expect(page.locator(loginPage.erroMessageIncorrectLogin(invalidcred))).toBeVisible();
