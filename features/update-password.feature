@@ -2,7 +2,7 @@ Feature: Update Password
 
 @run
 Scenario: User should be able to update password on DMS portal
-Given I navigate to "https://portal.tst-usw2.clearcaptions.com/login"
+Given I navigate to "https://portal.stage-usw2.clearcaptions.com/login"
 When I enter username "tu-test40.reuse2@ccnoemail.com" and "BROKAW224573" password
 And I click on the "Sign in" button
 Then the additional information banner should be visible
@@ -16,7 +16,7 @@ Then I "should not" see "Unable to update password, please try again later" text
 
 @run
 Scenario: User should see error if passwords do not match while updating password
-Given I navigate to "https://portal.tst-usw2.clearcaptions.com/login"
+Given I navigate to "https://portal.stage-usw2.clearcaptions.com/login"
 When I enter username "tu-test40.reuse2@ccnoemail.com" and "BROKAW224573" password
 And I click on the "Sign in" button
 Then the additional information banner should be visible
@@ -28,7 +28,7 @@ Then I should see "New Password and confirm password must match" text
 
 @run 
 Scenario: User should see error if passwords format is incorrect while updating password
-Given I navigate to "https://portal.tst-usw2.clearcaptions.com/login"
+Given I navigate to "https://portal.stage-usw2.clearcaptions.com/login"
 When I enter username "tu-test40.reuse2@ccnoemail.com" and "BROKAW224573" password
 And I click on the "Sign in" button
 Then the additional information banner should be visible
@@ -41,7 +41,7 @@ Then I should see "Invalid password format, please use atleast one uppercase, on
 
 @run
 Scenario: User should see error if passwords legth is less than eight characters while updating password
-Given I navigate to "https://portal.tst-usw2.clearcaptions.com/login"
+Given I navigate to "https://portal.stage-usw2.clearcaptions.com/login"
 When I enter username "tu-test40.reuse2@ccnoemail.com" and "BROKAW224573" password
 And I click on the "Sign in" button
 Then the additional information banner should be visible
