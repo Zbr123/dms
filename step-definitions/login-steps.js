@@ -5,7 +5,7 @@ const { expect } = require('@playwright/test');
 let loginPage = new LoginPage;
 
 
-Given('I navigate to {string}', async function (url) {
+Given('I navigate to {string}',{ timeout: 10000 } , async function (url) {
   await page.goto(url, { waitUntil: 'load' });
 });
 
@@ -19,9 +19,9 @@ When('I click on the signout button', function () {
 });
 
 
-When("I wait {string} seconds", async function (seconds) {
-  const timeout = parseInt(seconds, 10);
-  await new Promise((resolve) => setTimeout(resolve, timeout * 1000));
+When('I wait for {int} seconds', { timeout: 60000 }, async function (seconds) {
+  const milliseconds = seconds * 1000;
+  await new Promise(resolve => setTimeout(resolve, milliseconds));
 });
 
 
