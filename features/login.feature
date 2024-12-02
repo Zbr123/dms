@@ -3,7 +3,7 @@
 # @run
 # Scenario: User should be able to login with valid credentials on DMS portal
 # Given I navigate to "https://portal.stage-usw2.clearcaptions.com/login"
-# When I enter username "tu-test40.reuse2@ccnoemail.com" and "BROKAW224573" password
+# When I enter username and password
 # And I click on the "Sign in" button
 # Then the additional information banner should be visible
 

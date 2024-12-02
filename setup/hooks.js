@@ -7,7 +7,8 @@ const cucumber = require('../cucumber');
 // Launch options.
 const options = {
   headless: false,
-  slowMo: 100
+  slowMo: 100,
+  args: ["--start-maximized"]
 };
 
 // Create a global browser for the test session.

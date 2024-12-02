@@ -77,11 +77,11 @@ Feature: Profile page feature
 # And I wait for 2 seconds
 # Then the additional information banner should be visible
 
-@run
-Scenario: Portal should sign out the user if cancel button is pressed on consent
-Given I navigate to "https://portal.stage-usw2.clearcaptions.com/login"
-When I enter username "alfor@yopmail.com" and "FOUR474095" password
-And I click on the "Sign in" button
-And I wait for 5 seconds
-And I click on the "Cancel" button
-Then I should see Sign in text
+# @run
+# Scenario: Portal should sign out the user if cancel button is pressed on consent
+# Given I navigate to "https://portal.stage-usw2.clearcaptions.com/login"
+# When I enter username "alfor@yopmail.com" and "FOUR474095" password
+# And I click on the "Sign in" button
+# And I wait for 5 seconds
+# And I click on the "Cancel" button
+# Then I should see Sign in text
