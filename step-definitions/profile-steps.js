@@ -1,6 +1,7 @@
 const { Given, When, Then, And } = require('@cucumber/cucumber');
 const ProfilePage = require('../page-objects/profile-page');
 const { expect } = require('@playwright/test');
+const { timeout } = require('../cucumber');
 
 let profilePage = new ProfilePage;
 
@@ -25,7 +26,7 @@ Then('the additional information banner should be visible', async () => {
     expect(isDisabled).toBe(true);
   });
 
-  Then('I should see You have {string} attempts remaining.', async function (name) {
+  Then('I should see You have {string} attempts remaining.',{ timeout: 10000 },async function (name) {
     await expect(page.locator(profilePage.attemptLeftOnProfileTab(name))).toBeVisible();
     await page.waitForTimeout(6000);
   });

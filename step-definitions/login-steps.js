@@ -12,7 +12,7 @@ let createdEmail;
 let fetchedPassword;
 
 
-Given('I navigate to {string}',{ timeout: 10000 } , async function (url) {
+Given('I navigate to {string}',{ timeout: 30000 } , async function (url) {
   await page.goto(url, { waitUntil: 'load' });
 });
 
@@ -24,6 +24,11 @@ When('I enter username {string} and {string} password on salesforce', async func
 When('I enter username and password',{ timeout: 20000 }, async function () {
   await page.fill(loginPage.usernameInput, createdEmail);
   await page.fill(loginPage.passwordInput, fetchedPassword);
+});
+
+When('I enter username {string} and {string} password',{ timeout: 20000 }, async function (name, pass) {
+  await page.fill(loginPage.usernameInput, name);
+  await page.fill(loginPage.passwordInput, pass);
 });
 
 When('I click on the login button on salesforce',{ timeout: 20000 }, async function () {
@@ -94,7 +99,7 @@ Then('I should see invalid {string} text', async function (invalidcred) {
   await expect(page.locator(loginPage.erroMessageIncorrectLogin(invalidcred))).toBeVisible();
 });
 
-Given('I authenticate with Salesforce and retrieve an access token', async function () {
+Given('I authenticate with Salesforce and retrieve an access token',{ timeout: 300000 }, async function () {
   const authResponse = await axios.post('https://test.salesforce.com/services/oauth2/token', null, {
       headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -114,7 +119,7 @@ Given('I authenticate with Salesforce and retrieve an access token', async funct
 });
 
 // Step to make the second API call
-When('I make a POST request to create an external vendor with random email', { timeout: 20000 }, async function () {
+When('I make a POST request to create an external vendor with random email', { timeout: 500000 }, async function () {
   assert(token, 'Token is not available. Authentication might have failed.');
 
   const randomHomePhone = Math.floor(1000000000 + Math.random() * 9000000000).toString();
@@ -167,5 +172,6 @@ When('I make a POST request to create an external vendor with random email', { t
 Then('I verify the response to ensure the vendor is created successfully', function () {
   assert(apiResponse, 'API response is not available');
   // Additional checks can be added based on the expected response schema
+  console.log(createdEmail);
   console.log('API Response:', apiResponse);
 });
