@@ -50,7 +50,7 @@ When('I click on the searched user on Salesforce',{ timeout: 20000 } ,async func
 
 When('I get the password of searched user on Salesforce', { timeout: 30000 }, async function () {
   const detailsTabs = await page.locator(`//ul[@role='tablist']//li[contains(.,'Details')]`);
-  await detailsTabs.nth(1).click();
+  // await detailsTabs.nth(1).click();
   const passwordSelector = loginPage.getUserPassword(); 
   const passwordElement = await page.waitForSelector(passwordSelector, { timeout: 10000 });
   fetchedPassword = await passwordElement.textContent();
