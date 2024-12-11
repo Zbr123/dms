@@ -3,6 +3,7 @@ const axios = require('axios');
 const assert = require('assert');
 const LoginPage = require('../page-objects/login-page');
 const { expect } = require('@playwright/test');
+require('dotenv').config();
 
 let loginPage = new LoginPage;
 let token;
@@ -16,12 +17,12 @@ Given('I navigate to {string}',{ timeout: 30000 } , async function (url) {
   await page.goto(url, { waitUntil: 'load' });
 });
 
-When('I enter username {string} and {string} password on salesforce', async function (name, pass) {
-  await page.fill(loginPage.usernameInputSalesforce, name);
-  await page.fill(loginPage.passwordInputSalesforce, pass);
+When('I enter username and password on salesforce', async function () {
+  await page.fill(loginPage.usernameInputSalesforce, process.env.SALESFORCE_LOGIN_USERNAME);
+  await page.fill(loginPage.passwordInputSalesforce, process.env.SALESFORCE_LOGIN_PASSWORD);
 });
 
-When('I enter username and password',{ timeout: 20000 }, async function () {
+When('I enter username and password on DMS portal',{ timeout: 20000 }, async function () {
   await page.fill(loginPage.usernameInput, createdEmail);
   await page.fill(loginPage.passwordInput, fetchedPassword);
 });
@@ -106,10 +107,10 @@ Given('I authenticate with Salesforce and retrieve an access token',{ timeout: 3
       },
       params: {
           grant_type: 'password',
-          client_id: '3MVG98EE59.VIHmw6cKpbYy0Y0sTK_6S.qeQ5qAqIts3TUGk2qStnSYsygRK_v9xvaSBTro.cTsSOIfoPMlPF',
-          client_secret: '2C4F313966599E24AD806E9E3395820EBF93591D2705F9737E4C2202FEEBD708',
-          username: 'onpathtestuser@clearcaptions.com.ccstaging',
-          password: 'TestAlorica1GHwLN8So5XIorzG9dEKhZ5Hr3',
+          client_id: process.env.SALESFORCE_CLIENT_ID,
+          client_secret: process.env.SALESFORCE_CLIENT_SECRET,
+          username: process.env.SALESFORCE_USERNAME,
+          password: process.env.SALESFORCE_PASSWORD,
       },
   });
 
